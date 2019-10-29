@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/eu.chorevolution.modelingnotations.security/src"
+    modelPluginID="eu.chorevolution.modelingnotations.security" modelName="Security"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>security.ecore</foreignModel>
+  <genPackages prefix="Security" basePackage="eu.chorevolution.modelingnotations"
+      disposableProviderFactory="true" ecorePackage="security.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="security.ecore#//CredentialType">
+      <genEnumLiterals ecoreEnumLiteral="security.ecore#//CredentialType/UsernamePassword"/>
+      <genEnumLiterals ecoreEnumLiteral="security.ecore#//CredentialType/Custom"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="security.ecore#//AuthenticationElement">
+      <genEnumLiterals ecoreEnumLiteral="security.ecore#//AuthenticationElement/Lastname"/>
+      <genEnumLiterals ecoreEnumLiteral="security.ecore#//AuthenticationElement/Email"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="security.ecore#//AuthenticationTypeForwarded">
+      <genEnumLiterals ecoreEnumLiteral="security.ecore#//AuthenticationTypeForwarded/UserAccount"/>
+      <genEnumLiterals ecoreEnumLiteral="security.ecore#//AuthenticationTypeForwarded/GenericAccount"/>
+    </genEnums>
+    <genClasses ecoreClass="security.ecore#//SecurityPolicySet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference security.ecore#//SecurityPolicySet/authentication"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference security.ecore#//SecurityPolicySet/communication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecurityPolicySet/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecurityPolicySet/ressourceURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecurityPolicySet/serviceName"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//Authentication">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/credentialType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/genericAccount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/genericCredential"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/authNElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Authentication/AuthNTypeForwarded"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//Communication">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Communication/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//Communication/SecuredCommunication"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//SecurityModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference security.ecore#//SecurityModel/securitypolicyset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecurityModel/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

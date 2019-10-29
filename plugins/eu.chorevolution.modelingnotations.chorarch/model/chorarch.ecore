@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="chorarch" nsURI="http://eu.chorevolution/modelingnotations/chorarch"
+    nsPrefix="chorarch">
+  <eClassifiers xsi:type="ecore:EClass" name="ChorArchModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="choreographyID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="choreographyName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessComponent" abstract="true" eSuperTypes="#//Component">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Adapter" eSuperTypes="#//AdditionalComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityFilter" eSuperTypes="#//AdditionalComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="global" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingComponent" eSuperTypes="#//AdditionalComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProsumerCoordinationDelegate" eSuperTypes="#//AdditionalComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Component" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="roles" lowerBound="1" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+        eType="#//Interface" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AdditionalComponent" abstract="true"
+      eSuperTypes="#//Component">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebServiceComponent" eSuperTypes="#//BusinessComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RestServiceComponent" eSuperTypes="#//BusinessComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThingComponent" eSuperTypes="#//BusinessComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portNumber" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceDescription" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConsumerCoordinationDelegate" eSuperTypes="#//AdditionalComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConsumerInterface" eSuperTypes="#//Interface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceRequired" upperBound="-1"
+        eType="#//ProviderInterface" eOpposite="#//ProviderInterface/serviceProvided"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProviderInterface" eSuperTypes="#//Interface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceProvided" upperBound="-1"
+        eType="#//ConsumerInterface" eOpposite="#//ConsumerInterface/serviceRequired"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClientAppComponent" eSuperTypes="#//BusinessComponent"/>
+</ecore:EPackage>

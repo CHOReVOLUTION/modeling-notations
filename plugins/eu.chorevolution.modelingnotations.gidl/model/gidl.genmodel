@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright Text    &#xA; Copyright 2015 The CHOReVOLUTION project&#xA; &#xA; Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);&#xA; you may not use this file except in compliance with the License.&#xA; You may obtain a copy of the License at&#xA; &#xA;http://www.apache.org/licenses/LICENSE-2.0&#xA; &#xA; Unless required by applicable law or agreed to in writing, software&#xA; distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xA; WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xA; See the License for the specific language governing permissions and&#xA; limitations under the License."
+    modelDirectory="/eu.chorevolution.modelingnotations.gidl/src" modelPluginID="eu.chorevolution.modelingnotations.gidl"
+    modelName="Gidl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>gidl.ecore</foreignModel>
+  <genPackages prefix="Gidl" basePackage="eu.chorevolution.modelingnotations" disposableProviderFactory="true"
+      ecorePackage="gidl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gidl.ecore#//RoleTypes">
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//RoleTypes/provider"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//RoleTypes/consumer"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gidl.ecore#//OperationTypes">
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//OperationTypes/one_way"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//OperationTypes/two_way_sync"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//OperationTypes/two_way_async"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//OperationTypes/stream"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gidl.ecore#//ProtocolTypes">
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/REST"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/SOAP"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/CoAP"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/MQTT"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/AMQP"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/DDS"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/SemiSpace"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/ZeroMQ"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/WebSockets"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/DPWS"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ProtocolTypes/XMPP"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gidl.ecore#//SimpleTypes">
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//SimpleTypes/string"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//SimpleTypes/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//SimpleTypes/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//SimpleTypes/decimal"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//SimpleTypes/date"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//SimpleTypes/time"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//SimpleTypes/double"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//SimpleTypes/float"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gidl.ecore#//ContextTypes">
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ContextTypes/body"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ContextTypes/path"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ContextTypes/query"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ContextTypes/form"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//ContextTypes/header"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gidl.ecore#//OccurrencesTypes">
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//OccurrencesTypes/zero"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//OccurrencesTypes/one"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//OccurrencesTypes/unbounded"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gidl.ecore#//QosTypes">
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//QosTypes/unreliable"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//QosTypes/reliable"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gidl.ecore#//MediaTypes">
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//MediaTypes/json"/>
+      <genEnumLiterals ecoreEnumLiteral="gidl.ecore#//MediaTypes/xml"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="gidl.ecore#//RoleTypesObject"/>
+    <genDataTypes ecoreDataType="gidl.ecore#//ProtocolTypesObject"/>
+    <genDataTypes ecoreDataType="gidl.ecore#//OperationTypesObject"/>
+    <genDataTypes ecoreDataType="gidl.ecore#//SimpleTypesObject"/>
+    <genDataTypes ecoreDataType="gidl.ecore#//ContextTypesObject"/>
+    <genDataTypes ecoreDataType="gidl.ecore#//OccurrencesTypesObject"/>
+    <genDataTypes ecoreDataType="gidl.ecore#//QosTypesObject"/>
+    <genDataTypes ecoreDataType="gidl.ecore#//MediaTypesObject"/>
+    <genClasses ecoreClass="gidl.ecore#//GIDLModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//GIDLModel/hostAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//GIDLModel/protocol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gidl.ecore#//GIDLModel/hasInterfaces"/>
+    </genClasses>
+    <genClasses ecoreClass="gidl.ecore#//InterfaceDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//InterfaceDescription/role"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gidl.ecore#//InterfaceDescription/hasOperations"/>
+    </genClasses>
+    <genClasses ecoreClass="gidl.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//Operation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//Operation/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gidl.ecore#//Operation/hasScope"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gidl.ecore#//Operation/inputData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gidl.ecore#//Operation/outputData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//Operation/qos"/>
+    </genClasses>
+    <genClasses ecoreClass="gidl.ecore#//Scope">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//Scope/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//Scope/verb"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//Scope/uri"/>
+    </genClasses>
+    <genClasses ecoreClass="gidl.ecore#//Data">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//Data/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//Data/context"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gidl.ecore#//Data/hasDataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//Data/media"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gidl.ecore#//DataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//DataType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//DataType/minOccurs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//DataType/maxOccurs"/>
+    </genClasses>
+    <genClasses ecoreClass="gidl.ecore#//SimpleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gidl.ecore#//SimpleType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="gidl.ecore#//ComplexType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gidl.ecore#//ComplexType/hasDataType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

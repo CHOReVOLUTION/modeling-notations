@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="security" nsURI="http://www.thalesgroup.com/chorevolution/spec/security"
+    nsPrefix="security">
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityPolicySet">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authentication" upperBound="-1"
+        eType="#//Authentication" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communication" upperBound="-1"
+        eType="#//Communication" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ressourceURL" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Authentication">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="credentialType" lowerBound="1"
+        eType="#//CredentialType" defaultValueLiteral="UsernamePassword" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="genericAccount" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="genericCredential" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authNElement" eType="#//AuthenticationElement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AuthNTypeForwarded" lowerBound="1"
+        eType="#//AuthenticationTypeForwarded"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="customParametersNames"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Communication">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SecuredCommunication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CredentialType">
+    <eLiterals name="UsernamePassword"/>
+    <eLiterals name="Custom" value="1" literal="Custom"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securitypolicyset" lowerBound="1"
+        eType="#//SecurityPolicySet" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AuthenticationElement">
+    <eLiterals name="Lastname"/>
+    <eLiterals name="Email" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AuthenticationTypeForwarded">
+    <eLiterals name="UserAccount"/>
+    <eLiterals name="GenericAccount" value="1"/>
+    <eLiterals name="CustomAccount" value="2" literal="CustomAccount"/>
+  </eClassifiers>
+</ecore:EPackage>

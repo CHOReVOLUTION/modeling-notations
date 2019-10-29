@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="security" version="10.1.3.201511131800">
+  <ownedViewpoints name="security" modelFileExtension="*.security">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="crerateSecurityModel" label="security Model" showOnStartup="true" domainClass="security.SecurityModel" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <containerMappings name="createPolicySet" label="PolicySet" domainClass="security.SecurityPolicySet">
+          <subNodeMappings name="createAuthentication" label="Authentication" semanticCandidatesExpression="[self.authentication/]" domainClass="security.Authentication">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelAlignment="LEFT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.security.design/icons/authN.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="createCommunication" label="Communication" semanticCandidatesExpression="[self.communication/]" domainClass="security.Communication">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.security.design/icons/comm.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/eu.chorevolution.modelingnotations.security.design/icons/policySet.gif" labelAlignment="LEFT">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Security_element" label="Security Element">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAuthentication" label="Authentication" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='security']/@ownedRepresentations[name='crerateSecurityModel']/@defaultLayer/@containerMappings[name='createPolicySet']/@subNodeMappings[name='createAuthentication']" iconPath="/eu.chorevolution.modelingnotations.security.design/icons/authN.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="security.Authentication" referenceName="authentication">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="authentication"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Communication" nodeMappings="//@ownedViewpoints[name='security']/@ownedRepresentations[name='crerateSecurityModel']/@defaultLayer/@containerMappings[name='createPolicySet']/@subNodeMappings[name='createCommunication']" iconPath="/eu.chorevolution.modelingnotations.security.design/icons/comm.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="security.Communication" referenceName="communication">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="communication"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createPolicySet" label="PolicySet" containerMappings="//@ownedViewpoints[name='security']/@ownedRepresentations[name='crerateSecurityModel']/@defaultLayer/@containerMappings[name='createPolicySet']" iconPath="/eu.chorevolution.modelingnotations.security.design/icons/policySet.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="security.SecurityPolicySet" referenceName="securitypolicyset">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="SecurityPolicy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

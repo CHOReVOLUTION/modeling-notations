@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gidl" nsURI="http://eu.chorevolution/modelingnotations/gidl"
+    nsPrefix="gidl">
+  <eClassifiers xsi:type="ecore:EClass" name="GIDLModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostAddress" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocol" lowerBound="1"
+        eType="#//ProtocolTypesObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasInterfaces" lowerBound="1"
+        upperBound="-1" eType="#//InterfaceDescription" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" lowerBound="1" eType="#//RoleTypesObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasOperations" lowerBound="1"
+        upperBound="-1" eType="#//Operation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//OperationTypesObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasScope" lowerBound="1"
+        eType="#//Scope" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputData" upperBound="-1"
+        eType="#//Data" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputData" upperBound="-1"
+        eType="#//Data" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="qos" lowerBound="1" eType="#//QosTypesObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Scope">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="verb" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RoleTypes">
+    <eLiterals name="provider"/>
+    <eLiterals name="consumer" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OperationTypes">
+    <eLiterals name="one_way"/>
+    <eLiterals name="two_way_sync" value="1" literal="two_way_sync"/>
+    <eLiterals name="two_way_async" value="2"/>
+    <eLiterals name="stream" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ProtocolTypes">
+    <eLiterals name="REST"/>
+    <eLiterals name="SOAP" value="1"/>
+    <eLiterals name="CoAP" value="2" literal="CoAP"/>
+    <eLiterals name="MQTT" value="3"/>
+    <eLiterals name="AMQP" value="4" literal="AMQP"/>
+    <eLiterals name="DDS" value="5" literal="DDS"/>
+    <eLiterals name="SemiSpace" value="6"/>
+    <eLiterals name="ZeroMQ" value="7"/>
+    <eLiterals name="WebSockets" value="8"/>
+    <eLiterals name="DPWS" value="9" literal="DPWS"/>
+    <eLiterals name="XMPP" value="10" literal="XMPP"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SimpleTypes">
+    <eLiterals name="string"/>
+    <eLiterals name="integer" value="1"/>
+    <eLiterals name="boolean" value="2"/>
+    <eLiterals name="decimal" value="3"/>
+    <eLiterals name="date" value="4"/>
+    <eLiterals name="time" value="5"/>
+    <eLiterals name="double" value="6" literal="double"/>
+    <eLiterals name="float" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ContextTypes">
+    <eLiterals name="body"/>
+    <eLiterals name="path" value="1"/>
+    <eLiterals name="query" value="2"/>
+    <eLiterals name="form" value="3"/>
+    <eLiterals name="header" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OccurrencesTypes">
+    <eLiterals name="zero"/>
+    <eLiterals name="one"/>
+    <eLiterals name="unbounded" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="QosTypes">
+    <eLiterals name="unreliable" literal="unreliable"/>
+    <eLiterals name="reliable" value="1" literal="reliable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="RoleTypesObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="baseType" value="RoleTypes"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ProtocolTypesObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="baseType" value="ProtocolTypes"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="OperationTypesObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="baseType" value="OperationTypes"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SimpleTypesObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="baseType" value="SimpleTypes"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ContextTypesObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="baseType" value="ContextTypes"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="OccurrencesTypesObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="baseType" value="OccurrencesTypes"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="QosTypesObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="baseType" value="QosTypes"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="context" eType="#//ContextTypesObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasDataType" lowerBound="1"
+        upperBound="-1" eType="#//DataType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="media" eType="#//MediaTypesObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minOccurs" lowerBound="1"
+        eType="#//OccurrencesTypesObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxOccurs" lowerBound="1"
+        eType="#//OccurrencesTypesObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleType" eSuperTypes="#//DataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//SimpleTypesObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexType" eSuperTypes="#//DataType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasDataType" lowerBound="1"
+        upperBound="-1" eType="#//DataType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MediaTypes">
+    <eLiterals name="json"/>
+    <eLiterals name="xml"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="MediaTypesObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="baseType" value="MediaTypes"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

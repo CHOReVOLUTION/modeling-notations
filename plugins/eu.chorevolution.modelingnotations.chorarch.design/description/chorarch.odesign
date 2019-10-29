@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="chorarch" version="11.1.1.201610211630">
+  <ownedViewpoints name="chorarch" modelFileExtension="chorarch">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="chorArchModel" domainClass="chorarch.ChorArchModel" enablePopupBars="true">
+      <layout xsi:type="description_1:CompositeLayout"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="node_Component" label="Components" deletionDescription="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@toolSections.3/@ownedTools[name='deleteComponent']" semanticCandidatesExpression="[components/]" domainClass="chorarch.Component">
+          <borderedNodeMappings name="node_Provider" label="Node Provider" deletionDescription="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@toolSections.3/@ownedTools[name='deletePort']" semanticCandidatesExpression="[interfaces/]" domainClass="chorarch.ProviderInterface">
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(RestServiceComponent)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/provider.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(WebServiceComponent)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/provider.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(ThingComponent)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/provider.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(Adapter)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/provider.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(SecurityFilter)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/provider.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(BindingComponent)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/provider.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(ProsumerCoordinationDelegate)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/provider.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(ConsumerCoordinationDelegate)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/provider.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(ClientAppComponent)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/provider.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              </style>
+            </conditionnalStyles>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="node_Consumer" label="Node Consumer" deletionDescription="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@toolSections.3/@ownedTools[name='deletePort']" semanticCandidatesExpression="[interfaces/]" domainClass="chorarch.ConsumerInterface">
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(RestServiceComponent)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/consumer.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(WebServiceComponent)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/consumer.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(ThingComponent)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/consumer.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(Adapter)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/consumer.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(SecurityFilter)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/consumer.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(BindingComponent)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/consumer.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(ProsumerCoordinationDelegate)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/consumer.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(ConsumerCoordinationDelegate)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/consumer.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[container.oclIsTypeOf(ClientAppComponent)/]">
+              <style xsi:type="style:SquareDescription" labelExpression="" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/consumer.png" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              </style>
+            </conditionnalStyles>
+          </borderedNodeMappings>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(RestServiceComponent)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="13" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentRest.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(WebServiceComponent)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="13" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentWeb.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(ThingComponent)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="13" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentThing.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(Adapter)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="13" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentA.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(SecurityFilter)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="13" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentSF.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(BindingComponent)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="13" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentBC.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(ProsumerCoordinationDelegate)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="13" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentpCD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(ConsumerCoordinationDelegate)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="13" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentcCD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsTypeOf(ClientAppComponent)/]">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="13" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentClientApp.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <edgeMappings name="edge_Connector" label="Connector" deletionDescription="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@toolSections.3/@ownedTools[name='deleteConnector']" sourceMapping="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']/@borderedNodeMappings[name='node_Consumer']" targetMapping="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']/@borderedNodeMappings[name='node_Provider']" targetFinderExpression="[serviceRequired/]">
+          <style targetArrow="OutputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="newBusinessComponent" label="Business Components">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newWebServiceNode" label="Web Service" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentWeb.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.WebServiceComponent" referenceName="components" variableName="webServiceComponentInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="name"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="roles" valueExpression="roles"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="url" valueExpression="url"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newRestServiceNode" label="Rest Service" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentRest.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.RestServiceComponent" referenceName="components" variableName="restServiceComponentInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="name"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="roles" valueExpression="roles"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="url" valueExpression="url"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newThingServiceNode" label="Thing Service" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentThing.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.ThingComponent" referenceName="components" variableName="thingServiceComponentInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="name"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="roles" valueExpression="roles"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="url" valueExpression="url"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newClientAppServiceNode" label="Client App Service" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentClientApp.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.ClientAppComponent" referenceName="components" variableName="clientAppServiceComponentInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="name"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="roles" valueExpression="roles"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="url" valueExpression="url"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="newAdditionalComponent" label="Additional Components">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newAdapterServiceNode" label="Adapter" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentAd.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.Adapter" referenceName="components" variableName="adapterServiceComponentInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="name"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="roles" valueExpression="roles"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="url" valueExpression="url"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="location" valueExpression="location"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newSecurityFilterServiceNode" label="Security Filter" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentSF.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.SecurityFilter" referenceName="components" variableName="securityFilterComponentInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="name"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="roles" valueExpression="roles"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="url" valueExpression="url"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="location" valueExpression="location"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newBindingComponentServiceNode" label="Binding Component" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentBC.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.BindingComponent" referenceName="components" variableName="bindingComponentInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="name"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="roles" valueExpression="roles"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="url" valueExpression="url"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="location" valueExpression="location"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newProsumerCoordinationDelegateServiceNode" label="Prosumer CD" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentpCD.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.ProsumerCoordinationDelegate" referenceName="components">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="description"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newConsumerCoordinationDelegateServiceNode" label="Consumer CD" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/ComponentcCD.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.ConsumerCoordinationDelegate" referenceName="components">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="description"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="newConnector" label="Connector and Interface">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newConsumerInterface" label="Consumer Interface" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']/@borderedNodeMappings[name='node_Consumer']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/consumerPalette.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.ConsumerInterface" referenceName="interfaces">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="portNumber" valueExpression="[portNumber/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="serviceDescription" valueExpression="[serviceDescription/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="newProviderInterface" label="Provider Interface" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@nodeMappings[name='node_Component']/@borderedNodeMappings[name='node_Provider']" iconPath="/eu.chorevolution.modelingnotations.chorarch.design/icons/providerPalette.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chorarch.ProviderInterface" referenceName="interfaces">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="portNumber" valueExpression="[portNumber/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="serviceDescription" valueExpression="[serviceDescription/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create_Edge_Connector" label="Connector" edgeMappings="//@ownedViewpoints[name='chorarch']/@ownedRepresentations[name='chorArchModel']/@defaultLayer/@edgeMappings[name='edge_Connector']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="serviceRequired" valueExpression="[target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Tools">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteComponent" label="Delete Component">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deletePort" label="Delete Port">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteConnector" label="Delete Connector">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg version="1.2" baseProfile="tiny" width="50.53mm" height="40.53mm" viewBox="2974 1974 5053 4053" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+ <g visibility="visible" id="Slide_1">
+  <g id="DrawingGroup_1">
+   <g>
+    <path fill="rgb(255,0,0)" fill-opacity="0.102" stroke="rgb(255,255,255)" stroke-opacity="0.102" d="M 5500,6000 L 3000,6000 3000,2000 8000,2000 8000,6000 5500,6000 Z"/>
+    <path fill="none" stroke="rgb(255,0,0)" id="Drawing_1_0" stroke-width="53" stroke-linejoin="round" d="M 5500,6000 L 3000,6000 3000,2000 8000,2000 8000,6000 5500,6000 Z"/>
+   </g>
+   <g id="DrawingGroup_2">
+    <g>
+     <path fill="none" stroke="rgb(255,0,0)" id="Drawing_2_0" stroke-width="53" stroke-linejoin="round" d="M 3561,2300 L 4100,2300 3561,2300 Z"/>
+     <path fill="none" stroke="rgb(255,0,0)" id="Drawing_2_1" stroke-width="53" stroke-linejoin="round" d="M 3561,3000 L 4100,3000 3561,3000 Z"/>
+     <path fill="none" stroke="rgb(255,0,0)" id="Drawing_2_2" stroke-width="53" stroke-linejoin="round" d="M 4100,3000 L 4100,2300 4100,3000 Z"/>
+    </g>
+    <g>
+     <path fill="rgb(255,0,0)" stroke="none" d="M 3507,2573 L 3300,2573 3300,2423 3714,2423 3714,2573 3507,2573 Z"/>
+     <rect fill="none" stroke="none" x="3300" y="2423" width="415" height="151"/>
+    </g>
+    <g>
+     <path fill="rgb(255,0,0)" stroke="none" d="M 3507,2878 L 3300,2878 3300,2727 3714,2727 3714,2878 3507,2878 Z"/>
+     <rect fill="none" stroke="none" x="3300" y="2727" width="415" height="152"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: eu.chorevolution.modelingnotations.security.tests;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Fragment-Host: eu.chorevolution.modelingnotations.security;bundle-version="1.0.0"
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: eu.chorevolution.modelingnotations.security.tests
+Require-Bundle: org.junit;visibility:=reexport,
+ org.eclipse.core.runtime,
+ eu.chorevolution.modelingnotations.security;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport
+Bundle-ActivationPolicy: lazy

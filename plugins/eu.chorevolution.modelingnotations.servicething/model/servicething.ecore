@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="servicething" nsURI="http://eu.chorevolution/modelingnotations/servicething"
+    nsPrefix="servicething">
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceThingModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceDescription" lowerBound="1"
+        eType="#//InterfaceDescription" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interactionProtocolDescription"
+        eType="#//InteractionProtocolDescription" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="qosDescription" eType="#//QoSDescription"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identityDescription" eType="#//IdentityDescription"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securityDescription" eType="#//SecurityDescription"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endpoint" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceDescription" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InteractionProtocolDescription" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QoSDescription" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IdentityDescription" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityDescription" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WSDLModel" eSuperTypes="#//InterfaceDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WADLModel" eSuperTypes="#//InterfaceDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="COAPModel" eSuperTypes="#//InterfaceDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IPLTSModel" eSuperTypes="#//InteractionProtocolDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WSBPELModel" eSuperTypes="#//InteractionProtocolDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WSSPModel" eSuperTypes="#//SecurityDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WSLAModel" eSuperTypes="#//QoSDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IdentityModel" eSuperTypes="#//IdentityDescription"/>
+</ecore:EPackage>

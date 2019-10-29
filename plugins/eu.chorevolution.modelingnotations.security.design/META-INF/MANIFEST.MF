@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: eu.chorevolution.modelingnotations.security.design;singleton:=true
+Bundle-Version: 2.2.0.qualifier
+Bundle-Localization: plugin
+Bundle-Vendor: %providerName
+Bundle-Activator: eu.chorevolution.modelingnotations.security.design.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.sirius,
+ org.eclipse.sirius.common.acceleo.aql,
+ eu.chorevolution.modelingnotations.security
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

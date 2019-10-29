@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="adapter" nsURI="http://eu.chorevolution/modelingnotations/adapter"
+    nsPrefix="adapter">
+  <eClassifiers xsi:type="ecore:EClass" name="AdapterModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasChoreographyTasks" lowerBound="1"
+        upperBound="-1" eType="#//ChoreographyTask" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="wildcards" value=""/>
+        <details key="name" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasOperations" lowerBound="1"
+        upperBound="-1" eType="#//Operation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasOperationsRelations"
+        lowerBound="1" upperBound="-1" eType="#//OperationRelation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//AdapterType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MessageRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choreographyMessage" eType="#//ChoreographyMessage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="message" eType="#//Message"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasDataItemsRelations"
+        lowerBound="1" upperBound="-1" eType="#//DataItemRelation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataItemRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choreographyDataItem" upperBound="-1"
+        eType="#//ChoreographyDataItem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataItem" upperBound="-1"
+        eType="#//DataItem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasEnumerationItemsRelations"
+        upperBound="-1" eType="#//EnumerationItemRelation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transformationRule" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChoreographyMessage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasChoreographyDataItem"
+        lowerBound="1" eType="#//ChoreographyDataItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ChoreographyMessageType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Message">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasMessageDataItem" lowerBound="1"
+        eType="#//DataItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//MessageType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SimpleTypes">
+    <eLiterals name="string"/>
+    <eLiterals name="integer"/>
+    <eLiterals name="boolean"/>
+    <eLiterals name="date"/>
+    <eLiterals name="time"/>
+    <eLiterals name="double"/>
+    <eLiterals name="dateTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChoreographyDataItem" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minOccurs" lowerBound="1"
+        eType="#//OccurencesType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxOccurs" lowerBound="1"
+        eType="#//OccurencesType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChoreographyComplexItem" eSuperTypes="#//ChoreographyDataItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasChoreographyDataItems"
+        lowerBound="1" upperBound="-1" eType="#//ChoreographyDataItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChoreographySimpleItem" eSuperTypes="#//ChoreographyDataItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//SimpleTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasChoreographyEnumerationItems"
+        upperBound="-1" eType="#//ChoreographyEnumerationItem" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataItem" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minOccurs" lowerBound="1"
+        eType="#//OccurencesType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxOccurs" lowerBound="1"
+        eType="#//OccurencesType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexItem" eSuperTypes="#//DataItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasDataItems" lowerBound="1"
+        upperBound="-1" eType="#//DataItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleItem" eSuperTypes="#//DataItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//SimpleTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasEnumerationItems" upperBound="-1"
+        eType="#//EnumerationItem" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OccurencesType">
+    <eLiterals name="zero"/>
+    <eLiterals name="one"/>
+    <eLiterals name="unbounded"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChoreographyEnumerationItem" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumerationItem" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StringEnumerationItem" eSuperTypes="#//ChoreographyEnumerationItem #//EnumerationItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerEnumerationItem" eSuperTypes="#//ChoreographyEnumerationItem #//EnumerationItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumerationItemRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choreographyEnumerationItem"
+        lowerBound="1" eType="#//ChoreographyEnumerationItem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enumerationItem" lowerBound="1"
+        eType="#//EnumerationItem"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChoreographyTask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasChoreographyMessages"
+        lowerBound="1" upperBound="2" eType="#//ChoreographyMessage" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasMessages" lowerBound="1"
+        upperBound="2" eType="#//Message" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choreographyTasks" upperBound="-1"
+        eType="#//ChoreographyTask">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="wildcards" value=""/>
+        <details key="name" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
+        eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasMessagesRelations" lowerBound="1"
+        upperBound="-1" eType="#//MessageRelation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DoubleEnumerationItem" eSuperTypes="#//ChoreographyEnumerationItem #//EnumerationItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateEnumerationItem" eSuperTypes="#//ChoreographyEnumerationItem #//EnumerationItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AdapterType">
+    <eLiterals name="choreography_to_service"/>
+    <eLiterals name="service_to_choreography" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ChoreographyMessageType">
+    <eLiterals name="initiating"/>
+    <eLiterals name="return" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MessageType">
+    <eLiterals name="input"/>
+    <eLiterals name="output" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>

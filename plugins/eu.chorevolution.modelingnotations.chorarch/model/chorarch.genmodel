@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright 2015 The CHOReVOLUTION project&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);&#xD;&#xA;you may not use this file except in compliance with the License.&#xD;&#xA;You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;      http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software&#xD;&#xA;distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xD;&#xA;WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xD;&#xA;See the License for the specific language governing permissions and&#xD;&#xA;limitations under the License."
+    modelDirectory="/eu.chorevolution.modelingnotations.chorarch/src" modelPluginID="eu.chorevolution.modelingnotations.chorarch"
+    modelName="Chorarch" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>chorarch.ecore</foreignModel>
+  <genPackages prefix="Chorarch" basePackage="eu.chorevolution.modelingnotations"
+      disposableProviderFactory="true" ecorePackage="chorarch.ecore#/">
+    <genClasses ecoreClass="chorarch.ecore#//ChorArchModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chorarch.ecore#//ChorArchModel/components"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chorarch.ecore#//ChorArchModel/choreographyID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chorarch.ecore#//ChorArchModel/choreographyName"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="chorarch.ecore#//BusinessComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chorarch.ecore#//BusinessComponent/uri"/>
+    </genClasses>
+    <genClasses ecoreClass="chorarch.ecore#//Adapter"/>
+    <genClasses ecoreClass="chorarch.ecore#//SecurityFilter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chorarch.ecore#//SecurityFilter/global"/>
+    </genClasses>
+    <genClasses ecoreClass="chorarch.ecore#//BindingComponent"/>
+    <genClasses ecoreClass="chorarch.ecore#//ProsumerCoordinationDelegate"/>
+    <genClasses image="false" ecoreClass="chorarch.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chorarch.ecore#//Component/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chorarch.ecore#//Component/roles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chorarch.ecore#//Component/interfaces"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="chorarch.ecore#//AdditionalComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chorarch.ecore#//AdditionalComponent/location"/>
+    </genClasses>
+    <genClasses ecoreClass="chorarch.ecore#//WebServiceComponent"/>
+    <genClasses ecoreClass="chorarch.ecore#//RestServiceComponent"/>
+    <genClasses ecoreClass="chorarch.ecore#//ThingComponent"/>
+    <genClasses image="false" ecoreClass="chorarch.ecore#//Interface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chorarch.ecore#//Interface/portNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chorarch.ecore#//Interface/serviceDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="chorarch.ecore#//ConsumerCoordinationDelegate"/>
+    <genClasses ecoreClass="chorarch.ecore#//ConsumerInterface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chorarch.ecore#//ConsumerInterface/serviceRequired"/>
+    </genClasses>
+    <genClasses ecoreClass="chorarch.ecore#//ProviderInterface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chorarch.ecore#//ProviderInterface/serviceProvided"/>
+    </genClasses>
+    <genClasses ecoreClass="chorarch.ecore#//ClientAppComponent"/>
+  </genPackages>
+</genmodel:GenModel>
