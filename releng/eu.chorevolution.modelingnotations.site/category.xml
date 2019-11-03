@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/eu.chorevolution.modelingnotations.feature_2.2.0.qualifier.jar" id="eu.chorevolution.modelingnotations.feature" version="2.2.0.qualifier">
+   <feature url="features/eu.chorevolution.modelingnotations.feature_2.2.0.jar" id="eu.chorevolution.modelingnotations.feature" version="2.2.0">
       <category name="eu.chorevolution.modelingnotations.category"/>
    </feature>
    <category-def name="eu.chorevolution.modelingnotations.category" label="CHOReVOLUTION Modeling Notations">
@@ -8,7 +8,7 @@
          CHOReVOLUTION Modeling Notations
       </description>
    </category-def>
-   <!--
+
    <repository-reference location="http://nexus.disim.univaq.it/content/sites/chorevolution-modeling-notations/" enabled="true" />
-   -->
+
 </site>
