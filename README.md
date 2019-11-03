@@ -1,5 +1,6 @@
 # Modeling Notations
 This repository contains the metamodels, graphical editors related to the chorevolution studio.
+Furthermore, the metamodels are used inside the synthesis processor for synthesizing the artefacts such as Binding Components, Adapters, Security Filters and Coordination Delegates.
 
 ## Requirements
 
