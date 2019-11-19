@@ -18,11 +18,13 @@ To build the project and generate the bundle use Maven
 Inside the pom.xml file add the following repository
 
 ```
-<repository>
-	<id>chorevolution-modeling-notations</id>
-	<layout>p2</layout>
-	<url>http://nexus.disim.univaq.it/content/sites/chorevolution-modeling-notations/</url>
-</repository>
+<repositories>
+	<repository>
+		<id>chorevolution-modeling-notations</id>
+		<layout>p2</layout>
+		<url>http://nexus.disim.univaq.it/content/sites/chorevolution-modeling-notations/</url>
+	</repository>
+</repositories>
 ```
 and the following dependency
 
