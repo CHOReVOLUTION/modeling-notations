@@ -13,4 +13,25 @@ To build the project and generate the bundle use Maven
 
     mvn clean package
 
+
 ## Usage
+Inside the pom.xml file add the following repository
+
+```
+    <repository>
+        <id>chorevolution-modeling-notations</id>
+        <layout>p2</layout>
+        <url>http://nexus.disim.univaq.it/content/sites/chorevolution-modeling-notations/</url>
+    </repository>
+```
+add the following dependency
+
+```
+<dependencies>
+	<dependency>
+		<groupId>eu.chorevolution.validations</groupId>
+		<artifactId>bpmn2choreography-validator</artifactId>
+		<version>2.2.0</version>
+	</dependency>
+</dependencies>
+```
