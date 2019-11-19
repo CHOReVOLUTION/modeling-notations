@@ -24,7 +24,7 @@ Inside the pom.xml file add the following repository
 	<url>http://nexus.disim.univaq.it/content/sites/chorevolution-modeling-notations/</url>
 </repository>
 ```
-add the following dependency
+and the following dependency
 
 ```
 <dependencies>
