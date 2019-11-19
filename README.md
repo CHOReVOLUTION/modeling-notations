@@ -9,7 +9,7 @@ Furthermore, the metamodels are used inside the synthesis processor for synthesi
 
 ### Building
 
-To build the project and generate the bundle use Maven
+To build the project and generate the bundle use the following Maven command
 
     mvn clean package
 
