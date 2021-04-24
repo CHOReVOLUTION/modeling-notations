@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: eu.chorevolution.modelingnotations.gidl.editor;singleton:=true
 Automatic-Module-Name: eu.chorevolution.modelingnotations.gidl.editor
-Bundle-Version: 2.3.0.qualifier
+Bundle-Version: 2.3.0
 Bundle-ClassPath: .
 Bundle-Activator: eu.chorevolution.modelingnotations.gidl.presentation.GidlEditorPlugin$Implementation
 Bundle-Vendor: %providerName
