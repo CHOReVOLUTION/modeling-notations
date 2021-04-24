@@ -1,4 +1,17 @@
 /**
+ * Copyright 2015 The CHOReVOLUTION project
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package eu.chorevolution.modelingnotations.servicething.impl;
 
@@ -33,6 +46,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class ServicethingPackageImpl extends EPackageImpl implements ServicethingPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.";
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -159,7 +179,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ServicethingPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -173,7 +193,8 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 		if (isInited) return (ServicethingPackage)EPackage.Registry.INSTANCE.getEPackage(ServicethingPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ServicethingPackageImpl theServicethingPackage = (ServicethingPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ServicethingPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ServicethingPackageImpl());
+		Object registeredServicethingPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ServicethingPackageImpl theServicethingPackage = registeredServicethingPackage instanceof ServicethingPackageImpl ? (ServicethingPackageImpl)registeredServicethingPackage : new ServicethingPackageImpl();
 
 		isInited = true;
 
@@ -186,7 +207,6 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 		// Mark meta-data to indicate it can't be changed
 		theServicethingPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ServicethingPackage.eNS_URI, theServicethingPackage);
 		return theServicethingPackage;
@@ -197,6 +217,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getServiceThingModel() {
 		return serviceThingModelEClass;
 	}
@@ -206,6 +227,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getServiceThingModel_InterfaceDescription() {
 		return (EReference)serviceThingModelEClass.getEStructuralFeatures().get(0);
 	}
@@ -215,6 +237,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getServiceThingModel_InteractionProtocolDescription() {
 		return (EReference)serviceThingModelEClass.getEStructuralFeatures().get(1);
 	}
@@ -224,6 +247,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getServiceThingModel_QosDescription() {
 		return (EReference)serviceThingModelEClass.getEStructuralFeatures().get(2);
 	}
@@ -233,6 +257,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getServiceThingModel_IdentityDescription() {
 		return (EReference)serviceThingModelEClass.getEStructuralFeatures().get(3);
 	}
@@ -242,6 +267,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getServiceThingModel_SecurityDescription() {
 		return (EReference)serviceThingModelEClass.getEStructuralFeatures().get(4);
 	}
@@ -251,6 +277,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getServiceThingModel_ID() {
 		return (EAttribute)serviceThingModelEClass.getEStructuralFeatures().get(5);
 	}
@@ -260,6 +287,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getServiceThingModel_Name() {
 		return (EAttribute)serviceThingModelEClass.getEStructuralFeatures().get(6);
 	}
@@ -269,6 +297,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getServiceThingModel_Endpoint() {
 		return (EAttribute)serviceThingModelEClass.getEStructuralFeatures().get(7);
 	}
@@ -278,6 +307,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getServiceThingModel_Description() {
 		return (EAttribute)serviceThingModelEClass.getEStructuralFeatures().get(8);
 	}
@@ -287,6 +317,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterfaceDescription() {
 		return interfaceDescriptionEClass;
 	}
@@ -296,6 +327,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInteractionProtocolDescription() {
 		return interactionProtocolDescriptionEClass;
 	}
@@ -305,6 +337,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getQoSDescription() {
 		return qoSDescriptionEClass;
 	}
@@ -314,6 +347,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIdentityDescription() {
 		return identityDescriptionEClass;
 	}
@@ -323,6 +357,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSecurityDescription() {
 		return securityDescriptionEClass;
 	}
@@ -332,6 +367,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWSDLModel() {
 		return wsdlModelEClass;
 	}
@@ -341,6 +377,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWADLModel() {
 		return wadlModelEClass;
 	}
@@ -350,6 +387,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCOAPModel() {
 		return coapModelEClass;
 	}
@@ -359,6 +397,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIPLTSModel() {
 		return ipltsModelEClass;
 	}
@@ -368,6 +407,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWSBPELModel() {
 		return wsbpelModelEClass;
 	}
@@ -377,6 +417,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWSSPModel() {
 		return wsspModelEClass;
 	}
@@ -386,6 +427,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWSLAModel() {
 		return wslaModelEClass;
 	}
@@ -395,6 +437,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIdentityModel() {
 		return identityModelEClass;
 	}
@@ -404,6 +447,7 @@ public class ServicethingPackageImpl extends EPackageImpl implements Servicethin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ServicethingFactory getServicethingFactory() {
 		return (ServicethingFactory)getEFactoryInstance();
 	}

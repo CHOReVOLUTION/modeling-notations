@@ -1,18 +1,17 @@
 /**
- * Copyright Text    
- *  Copyright 2015 The CHOReVOLUTION project
- *  
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *  
- * http://www.apache.org/licenses/LICENSE-2.0
- *  
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ * Copyright 2015 The CHOReVOLUTION project
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package eu.chorevolution.modelingnotations.adapter.impl;
 
@@ -60,6 +59,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.";
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -270,7 +276,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link AdapterPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -284,7 +290,8 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 		if (isInited) return (AdapterPackage)EPackage.Registry.INSTANCE.getEPackage(AdapterPackage.eNS_URI);
 
 		// Obtain or create and register package
-		AdapterPackageImpl theAdapterPackage = (AdapterPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof AdapterPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new AdapterPackageImpl());
+		Object registeredAdapterPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		AdapterPackageImpl theAdapterPackage = registeredAdapterPackage instanceof AdapterPackageImpl ? (AdapterPackageImpl)registeredAdapterPackage : new AdapterPackageImpl();
 
 		isInited = true;
 
@@ -297,7 +304,6 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 		// Mark meta-data to indicate it can't be changed
 		theAdapterPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(AdapterPackage.eNS_URI, theAdapterPackage);
 		return theAdapterPackage;
@@ -308,6 +314,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAdapterModel() {
 		return adapterModelEClass;
 	}
@@ -317,6 +324,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAdapterModel_HasChoreographyTasks() {
 		return (EReference)adapterModelEClass.getEStructuralFeatures().get(0);
 	}
@@ -326,6 +334,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAdapterModel_HasOperations() {
 		return (EReference)adapterModelEClass.getEStructuralFeatures().get(1);
 	}
@@ -335,6 +344,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAdapterModel_HasOperationsRelations() {
 		return (EReference)adapterModelEClass.getEStructuralFeatures().get(2);
 	}
@@ -344,6 +354,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAdapterModel_Type() {
 		return (EAttribute)adapterModelEClass.getEStructuralFeatures().get(3);
 	}
@@ -353,6 +364,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMessageRelation() {
 		return messageRelationEClass;
 	}
@@ -362,6 +374,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMessageRelation_ChoreographyMessage() {
 		return (EReference)messageRelationEClass.getEStructuralFeatures().get(0);
 	}
@@ -371,6 +384,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMessageRelation_Message() {
 		return (EReference)messageRelationEClass.getEStructuralFeatures().get(1);
 	}
@@ -380,6 +394,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMessageRelation_HasDataItemsRelations() {
 		return (EReference)messageRelationEClass.getEStructuralFeatures().get(2);
 	}
@@ -389,6 +404,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDataItemRelation() {
 		return dataItemRelationEClass;
 	}
@@ -398,6 +414,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDataItemRelation_ChoreographyDataItem() {
 		return (EReference)dataItemRelationEClass.getEStructuralFeatures().get(0);
 	}
@@ -407,6 +424,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDataItemRelation_DataItem() {
 		return (EReference)dataItemRelationEClass.getEStructuralFeatures().get(1);
 	}
@@ -416,6 +434,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDataItemRelation_HasEnumerationItemsRelations() {
 		return (EReference)dataItemRelationEClass.getEStructuralFeatures().get(2);
 	}
@@ -425,6 +444,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataItemRelation_TransformationRule() {
 		return (EAttribute)dataItemRelationEClass.getEStructuralFeatures().get(3);
 	}
@@ -434,6 +454,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChoreographyMessage() {
 		return choreographyMessageEClass;
 	}
@@ -443,6 +464,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChoreographyMessage_Name() {
 		return (EAttribute)choreographyMessageEClass.getEStructuralFeatures().get(0);
 	}
@@ -452,6 +474,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChoreographyMessage_HasChoreographyDataItem() {
 		return (EReference)choreographyMessageEClass.getEStructuralFeatures().get(1);
 	}
@@ -461,6 +484,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChoreographyMessage_Type() {
 		return (EAttribute)choreographyMessageEClass.getEStructuralFeatures().get(2);
 	}
@@ -470,6 +494,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMessage() {
 		return messageEClass;
 	}
@@ -479,6 +504,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMessage_Name() {
 		return (EAttribute)messageEClass.getEStructuralFeatures().get(0);
 	}
@@ -488,6 +514,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMessage_HasMessageDataItem() {
 		return (EReference)messageEClass.getEStructuralFeatures().get(1);
 	}
@@ -497,6 +524,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMessage_Type() {
 		return (EAttribute)messageEClass.getEStructuralFeatures().get(2);
 	}
@@ -506,6 +534,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChoreographyDataItem() {
 		return choreographyDataItemEClass;
 	}
@@ -515,6 +544,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChoreographyDataItem_Name() {
 		return (EAttribute)choreographyDataItemEClass.getEStructuralFeatures().get(0);
 	}
@@ -524,6 +554,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChoreographyDataItem_MinOccurs() {
 		return (EAttribute)choreographyDataItemEClass.getEStructuralFeatures().get(1);
 	}
@@ -533,6 +564,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChoreographyDataItem_MaxOccurs() {
 		return (EAttribute)choreographyDataItemEClass.getEStructuralFeatures().get(2);
 	}
@@ -542,6 +574,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChoreographyComplexItem() {
 		return choreographyComplexItemEClass;
 	}
@@ -551,6 +584,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChoreographyComplexItem_HasChoreographyDataItems() {
 		return (EReference)choreographyComplexItemEClass.getEStructuralFeatures().get(0);
 	}
@@ -560,6 +594,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChoreographyComplexItem_TypeName() {
 		return (EAttribute)choreographyComplexItemEClass.getEStructuralFeatures().get(1);
 	}
@@ -569,6 +604,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChoreographySimpleItem() {
 		return choreographySimpleItemEClass;
 	}
@@ -578,6 +614,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChoreographySimpleItem_Type() {
 		return (EAttribute)choreographySimpleItemEClass.getEStructuralFeatures().get(0);
 	}
@@ -587,6 +624,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChoreographySimpleItem_HasChoreographyEnumerationItems() {
 		return (EReference)choreographySimpleItemEClass.getEStructuralFeatures().get(1);
 	}
@@ -596,6 +634,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDataItem() {
 		return dataItemEClass;
 	}
@@ -605,6 +644,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataItem_Name() {
 		return (EAttribute)dataItemEClass.getEStructuralFeatures().get(0);
 	}
@@ -614,6 +654,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataItem_MinOccurs() {
 		return (EAttribute)dataItemEClass.getEStructuralFeatures().get(1);
 	}
@@ -623,6 +664,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataItem_MaxOccurs() {
 		return (EAttribute)dataItemEClass.getEStructuralFeatures().get(2);
 	}
@@ -632,6 +674,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getComplexItem() {
 		return complexItemEClass;
 	}
@@ -641,6 +684,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getComplexItem_HasDataItems() {
 		return (EReference)complexItemEClass.getEStructuralFeatures().get(0);
 	}
@@ -650,6 +694,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComplexItem_TypeName() {
 		return (EAttribute)complexItemEClass.getEStructuralFeatures().get(1);
 	}
@@ -659,6 +704,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSimpleItem() {
 		return simpleItemEClass;
 	}
@@ -668,6 +714,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSimpleItem_Type() {
 		return (EAttribute)simpleItemEClass.getEStructuralFeatures().get(0);
 	}
@@ -677,6 +724,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSimpleItem_HasEnumerationItems() {
 		return (EReference)simpleItemEClass.getEStructuralFeatures().get(1);
 	}
@@ -686,6 +734,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChoreographyEnumerationItem() {
 		return choreographyEnumerationItemEClass;
 	}
@@ -695,6 +744,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEnumerationItem() {
 		return enumerationItemEClass;
 	}
@@ -704,6 +754,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStringEnumerationItem() {
 		return stringEnumerationItemEClass;
 	}
@@ -713,6 +764,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStringEnumerationItem_Value() {
 		return (EAttribute)stringEnumerationItemEClass.getEStructuralFeatures().get(0);
 	}
@@ -722,6 +774,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIntegerEnumerationItem() {
 		return integerEnumerationItemEClass;
 	}
@@ -731,6 +784,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIntegerEnumerationItem_Value() {
 		return (EAttribute)integerEnumerationItemEClass.getEStructuralFeatures().get(0);
 	}
@@ -740,6 +794,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEnumerationItemRelation() {
 		return enumerationItemRelationEClass;
 	}
@@ -749,6 +804,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnumerationItemRelation_ChoreographyEnumerationItem() {
 		return (EReference)enumerationItemRelationEClass.getEStructuralFeatures().get(0);
 	}
@@ -758,6 +814,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnumerationItemRelation_EnumerationItem() {
 		return (EReference)enumerationItemRelationEClass.getEStructuralFeatures().get(1);
 	}
@@ -767,6 +824,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChoreographyTask() {
 		return choreographyTaskEClass;
 	}
@@ -776,6 +834,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChoreographyTask_Name() {
 		return (EAttribute)choreographyTaskEClass.getEStructuralFeatures().get(0);
 	}
@@ -785,6 +844,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChoreographyTask_HasChoreographyMessages() {
 		return (EReference)choreographyTaskEClass.getEStructuralFeatures().get(1);
 	}
@@ -794,6 +854,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOperation() {
 		return operationEClass;
 	}
@@ -803,6 +864,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOperation_Name() {
 		return (EAttribute)operationEClass.getEStructuralFeatures().get(0);
 	}
@@ -812,6 +874,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOperation_HasMessages() {
 		return (EReference)operationEClass.getEStructuralFeatures().get(1);
 	}
@@ -821,6 +884,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOperationRelation() {
 		return operationRelationEClass;
 	}
@@ -830,6 +894,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOperationRelation_ChoreographyTasks() {
 		return (EReference)operationRelationEClass.getEStructuralFeatures().get(0);
 	}
@@ -839,6 +904,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOperationRelation_Operations() {
 		return (EReference)operationRelationEClass.getEStructuralFeatures().get(1);
 	}
@@ -848,6 +914,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOperationRelation_HasMessagesRelations() {
 		return (EReference)operationRelationEClass.getEStructuralFeatures().get(2);
 	}
@@ -857,6 +924,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDoubleEnumerationItem() {
 		return doubleEnumerationItemEClass;
 	}
@@ -866,6 +934,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDoubleEnumerationItem_Value() {
 		return (EAttribute)doubleEnumerationItemEClass.getEStructuralFeatures().get(0);
 	}
@@ -875,6 +944,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDateEnumerationItem() {
 		return dateEnumerationItemEClass;
 	}
@@ -884,6 +954,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDateEnumerationItem_Value() {
 		return (EAttribute)dateEnumerationItemEClass.getEStructuralFeatures().get(0);
 	}
@@ -893,6 +964,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getSimpleTypes() {
 		return simpleTypesEEnum;
 	}
@@ -902,6 +974,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getOccurencesType() {
 		return occurencesTypeEEnum;
 	}
@@ -911,6 +984,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getAdapterType() {
 		return adapterTypeEEnum;
 	}
@@ -920,6 +994,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getChoreographyMessageType() {
 		return choreographyMessageTypeEEnum;
 	}
@@ -929,6 +1004,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getMessageType() {
 		return messageTypeEEnum;
 	}
@@ -938,6 +1014,7 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdapterFactory getAdapterFactory() {
 		return (AdapterFactory)getEFactoryInstance();
 	}
@@ -1225,20 +1302,20 @@ public class AdapterPackageImpl extends EPackageImpl implements AdapterPackage {
 	 * @generated
 	 */
 	protected void createExtendedMetaDataAnnotations() {
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
 		addAnnotation
-		  (getAdapterModel_HasChoreographyTasks(), 
-		   source, 
+		  (getAdapterModel_HasChoreographyTasks(),
+		   source,
 		   new String[] {
-			 "wildcards", "",
-			 "name", ""
-		   });	
+			   "wildcards", "",
+			   "name", ""
+		   });
 		addAnnotation
-		  (getOperationRelation_ChoreographyTasks(), 
-		   source, 
+		  (getOperationRelation_ChoreographyTasks(),
+		   source,
 		   new String[] {
-			 "wildcards", "",
-			 "name", ""
+			   "wildcards", "",
+			   "name", ""
 		   });
 	}
 

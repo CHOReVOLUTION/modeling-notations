@@ -1,18 +1,17 @@
 /**
- * Copyright Text    
- *  Copyright 2015 The CHOReVOLUTION project
- *  
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *  
- * http://www.apache.org/licenses/LICENSE-2.0
- *  
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ * Copyright 2015 The CHOReVOLUTION project
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package eu.chorevolution.modelingnotations.gidl.impl;
 
@@ -51,6 +50,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.";
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -247,7 +253,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link GidlPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -261,7 +267,8 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 		if (isInited) return (GidlPackage)EPackage.Registry.INSTANCE.getEPackage(GidlPackage.eNS_URI);
 
 		// Obtain or create and register package
-		GidlPackageImpl theGidlPackage = (GidlPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof GidlPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new GidlPackageImpl());
+		Object registeredGidlPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		GidlPackageImpl theGidlPackage = registeredGidlPackage instanceof GidlPackageImpl ? (GidlPackageImpl)registeredGidlPackage : new GidlPackageImpl();
 
 		isInited = true;
 
@@ -274,7 +281,6 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 		// Mark meta-data to indicate it can't be changed
 		theGidlPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(GidlPackage.eNS_URI, theGidlPackage);
 		return theGidlPackage;
@@ -285,6 +291,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGIDLModel() {
 		return gidlModelEClass;
 	}
@@ -294,6 +301,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGIDLModel_HostAddress() {
 		return (EAttribute)gidlModelEClass.getEStructuralFeatures().get(0);
 	}
@@ -303,6 +311,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGIDLModel_Protocol() {
 		return (EAttribute)gidlModelEClass.getEStructuralFeatures().get(1);
 	}
@@ -312,6 +321,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGIDLModel_HasInterfaces() {
 		return (EReference)gidlModelEClass.getEStructuralFeatures().get(2);
 	}
@@ -321,6 +331,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterfaceDescription() {
 		return interfaceDescriptionEClass;
 	}
@@ -330,6 +341,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceDescription_Role() {
 		return (EAttribute)interfaceDescriptionEClass.getEStructuralFeatures().get(0);
 	}
@@ -339,6 +351,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInterfaceDescription_HasOperations() {
 		return (EReference)interfaceDescriptionEClass.getEStructuralFeatures().get(1);
 	}
@@ -348,6 +361,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOperation() {
 		return operationEClass;
 	}
@@ -357,6 +371,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOperation_Name() {
 		return (EAttribute)operationEClass.getEStructuralFeatures().get(0);
 	}
@@ -366,6 +381,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOperation_Type() {
 		return (EAttribute)operationEClass.getEStructuralFeatures().get(1);
 	}
@@ -375,6 +391,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOperation_HasScope() {
 		return (EReference)operationEClass.getEStructuralFeatures().get(2);
 	}
@@ -384,6 +401,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOperation_InputData() {
 		return (EReference)operationEClass.getEStructuralFeatures().get(3);
 	}
@@ -393,6 +411,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOperation_OutputData() {
 		return (EReference)operationEClass.getEStructuralFeatures().get(4);
 	}
@@ -402,6 +421,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOperation_Qos() {
 		return (EAttribute)operationEClass.getEStructuralFeatures().get(5);
 	}
@@ -411,6 +431,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getScope() {
 		return scopeEClass;
 	}
@@ -420,6 +441,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getScope_Name() {
 		return (EAttribute)scopeEClass.getEStructuralFeatures().get(0);
 	}
@@ -429,6 +451,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getScope_Verb() {
 		return (EAttribute)scopeEClass.getEStructuralFeatures().get(1);
 	}
@@ -438,6 +461,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getScope_Uri() {
 		return (EAttribute)scopeEClass.getEStructuralFeatures().get(2);
 	}
@@ -447,6 +471,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getData() {
 		return dataEClass;
 	}
@@ -456,6 +481,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getData_Name() {
 		return (EAttribute)dataEClass.getEStructuralFeatures().get(0);
 	}
@@ -465,6 +491,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getData_Context() {
 		return (EAttribute)dataEClass.getEStructuralFeatures().get(1);
 	}
@@ -474,6 +501,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getData_HasDataType() {
 		return (EReference)dataEClass.getEStructuralFeatures().get(2);
 	}
@@ -483,6 +511,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getData_Media() {
 		return (EAttribute)dataEClass.getEStructuralFeatures().get(3);
 	}
@@ -492,6 +521,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDataType() {
 		return dataTypeEClass;
 	}
@@ -501,6 +531,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataType_Name() {
 		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -510,6 +541,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataType_MinOccurs() {
 		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(1);
 	}
@@ -519,6 +551,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataType_MaxOccurs() {
 		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(2);
 	}
@@ -528,6 +561,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSimpleType() {
 		return simpleTypeEClass;
 	}
@@ -537,6 +571,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSimpleType_Type() {
 		return (EAttribute)simpleTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -546,6 +581,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getComplexType() {
 		return complexTypeEClass;
 	}
@@ -555,6 +591,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getComplexType_HasDataType() {
 		return (EReference)complexTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -564,6 +601,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getRoleTypes() {
 		return roleTypesEEnum;
 	}
@@ -573,6 +611,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getOperationTypes() {
 		return operationTypesEEnum;
 	}
@@ -582,6 +621,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getProtocolTypes() {
 		return protocolTypesEEnum;
 	}
@@ -591,6 +631,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getSimpleTypes() {
 		return simpleTypesEEnum;
 	}
@@ -600,6 +641,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getContextTypes() {
 		return contextTypesEEnum;
 	}
@@ -609,6 +651,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getOccurrencesTypes() {
 		return occurrencesTypesEEnum;
 	}
@@ -618,6 +661,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getQosTypes() {
 		return qosTypesEEnum;
 	}
@@ -627,6 +671,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getMediaTypes() {
 		return mediaTypesEEnum;
 	}
@@ -636,6 +681,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getRoleTypesObject() {
 		return roleTypesObjectEDataType;
 	}
@@ -645,6 +691,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getProtocolTypesObject() {
 		return protocolTypesObjectEDataType;
 	}
@@ -654,6 +701,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getOperationTypesObject() {
 		return operationTypesObjectEDataType;
 	}
@@ -663,6 +711,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getSimpleTypesObject() {
 		return simpleTypesObjectEDataType;
 	}
@@ -672,6 +721,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getContextTypesObject() {
 		return contextTypesObjectEDataType;
 	}
@@ -681,6 +731,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getOccurrencesTypesObject() {
 		return occurrencesTypesObjectEDataType;
 	}
@@ -690,6 +741,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getQosTypesObject() {
 		return qosTypesObjectEDataType;
 	}
@@ -699,6 +751,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getMediaTypesObject() {
 		return mediaTypesObjectEDataType;
 	}
@@ -708,6 +761,7 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GidlFactory getGidlFactory() {
 		return (GidlFactory)getEFactoryInstance();
 	}
@@ -941,54 +995,54 @@ public class GidlPackageImpl extends EPackageImpl implements GidlPackage {
 	 * @generated
 	 */
 	protected void createExtendedMetaDataAnnotations() {
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
 		addAnnotation
-		  (roleTypesObjectEDataType, 
-		   source, 
+		  (roleTypesObjectEDataType,
+		   source,
 		   new String[] {
-			 "baseType", "RoleTypes"
-		   });	
+			   "baseType", "RoleTypes"
+		   });
 		addAnnotation
-		  (protocolTypesObjectEDataType, 
-		   source, 
+		  (protocolTypesObjectEDataType,
+		   source,
 		   new String[] {
-			 "baseType", "ProtocolTypes"
-		   });	
+			   "baseType", "ProtocolTypes"
+		   });
 		addAnnotation
-		  (operationTypesObjectEDataType, 
-		   source, 
+		  (operationTypesObjectEDataType,
+		   source,
 		   new String[] {
-			 "baseType", "OperationTypes"
-		   });	
+			   "baseType", "OperationTypes"
+		   });
 		addAnnotation
-		  (simpleTypesObjectEDataType, 
-		   source, 
+		  (simpleTypesObjectEDataType,
+		   source,
 		   new String[] {
-			 "baseType", "SimpleTypes"
-		   });	
+			   "baseType", "SimpleTypes"
+		   });
 		addAnnotation
-		  (contextTypesObjectEDataType, 
-		   source, 
+		  (contextTypesObjectEDataType,
+		   source,
 		   new String[] {
-			 "baseType", "ContextTypes"
-		   });	
+			   "baseType", "ContextTypes"
+		   });
 		addAnnotation
-		  (occurrencesTypesObjectEDataType, 
-		   source, 
+		  (occurrencesTypesObjectEDataType,
+		   source,
 		   new String[] {
-			 "baseType", "OccurrencesTypes"
-		   });	
+			   "baseType", "OccurrencesTypes"
+		   });
 		addAnnotation
-		  (qosTypesObjectEDataType, 
-		   source, 
+		  (qosTypesObjectEDataType,
+		   source,
 		   new String[] {
-			 "baseType", "QosTypes"
-		   });	
+			   "baseType", "QosTypes"
+		   });
 		addAnnotation
-		  (mediaTypesObjectEDataType, 
-		   source, 
+		  (mediaTypesObjectEDataType,
+		   source,
 		   new String[] {
-			 "baseType", "MediaTypes"
+			   "baseType", "MediaTypes"
 		   });
 	}
 

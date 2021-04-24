@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  * 
- *       http://www.apache.org/licenses/LICENSE-2.0
+ *       http://www.apache.org/licenses/LICENSE-2.0
  * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -53,7 +53,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\r\n\r\nLicensed under the Apache License, Version 2.0 (the \"License\");\r\nyou may not use this file except in compliance with the License.\r\nYou may obtain a copy of the License at\r\n\r\n      http://www.apache.org/licenses/LICENSE-2.0\r\n\r\nUnless required by applicable law or agreed to in writing, software\r\ndistributed under the License is distributed on an \"AS IS\" BASIS,\r\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\nSee the License for the specific language governing permissions and\r\nlimitations under the License.";
+	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -195,7 +195,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ChorarchPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -209,7 +209,8 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 		if (isInited) return (ChorarchPackage)EPackage.Registry.INSTANCE.getEPackage(ChorarchPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ChorarchPackageImpl theChorarchPackage = (ChorarchPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ChorarchPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ChorarchPackageImpl());
+		Object registeredChorarchPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ChorarchPackageImpl theChorarchPackage = registeredChorarchPackage instanceof ChorarchPackageImpl ? (ChorarchPackageImpl)registeredChorarchPackage : new ChorarchPackageImpl();
 
 		isInited = true;
 
@@ -222,7 +223,6 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 		// Mark meta-data to indicate it can't be changed
 		theChorarchPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ChorarchPackage.eNS_URI, theChorarchPackage);
 		return theChorarchPackage;
@@ -233,6 +233,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChorArchModel() {
 		return chorArchModelEClass;
 	}
@@ -242,6 +243,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChorArchModel_Components() {
 		return (EReference)chorArchModelEClass.getEStructuralFeatures().get(0);
 	}
@@ -251,6 +253,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChorArchModel_ChoreographyID() {
 		return (EAttribute)chorArchModelEClass.getEStructuralFeatures().get(1);
 	}
@@ -260,6 +263,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChorArchModel_ChoreographyName() {
 		return (EAttribute)chorArchModelEClass.getEStructuralFeatures().get(2);
 	}
@@ -269,6 +273,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBusinessComponent() {
 		return businessComponentEClass;
 	}
@@ -278,6 +283,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBusinessComponent_Uri() {
 		return (EAttribute)businessComponentEClass.getEStructuralFeatures().get(0);
 	}
@@ -287,6 +293,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAdapter() {
 		return adapterEClass;
 	}
@@ -296,6 +303,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSecurityFilter() {
 		return securityFilterEClass;
 	}
@@ -305,6 +313,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSecurityFilter_Global() {
 		return (EAttribute)securityFilterEClass.getEStructuralFeatures().get(0);
 	}
@@ -314,6 +323,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBindingComponent() {
 		return bindingComponentEClass;
 	}
@@ -323,6 +333,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getProsumerCoordinationDelegate() {
 		return prosumerCoordinationDelegateEClass;
 	}
@@ -332,6 +343,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getComponent() {
 		return componentEClass;
 	}
@@ -341,6 +353,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComponent_Name() {
 		return (EAttribute)componentEClass.getEStructuralFeatures().get(0);
 	}
@@ -350,6 +363,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComponent_Roles() {
 		return (EAttribute)componentEClass.getEStructuralFeatures().get(1);
 	}
@@ -359,6 +373,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getComponent_Interfaces() {
 		return (EReference)componentEClass.getEStructuralFeatures().get(2);
 	}
@@ -368,6 +383,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAdditionalComponent() {
 		return additionalComponentEClass;
 	}
@@ -377,6 +393,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAdditionalComponent_Location() {
 		return (EAttribute)additionalComponentEClass.getEStructuralFeatures().get(0);
 	}
@@ -386,6 +403,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWebServiceComponent() {
 		return webServiceComponentEClass;
 	}
@@ -395,6 +413,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRestServiceComponent() {
 		return restServiceComponentEClass;
 	}
@@ -404,6 +423,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getThingComponent() {
 		return thingComponentEClass;
 	}
@@ -413,6 +433,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterface() {
 		return interfaceEClass;
 	}
@@ -422,6 +443,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterface_PortNumber() {
 		return (EAttribute)interfaceEClass.getEStructuralFeatures().get(0);
 	}
@@ -431,6 +453,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterface_ServiceDescription() {
 		return (EAttribute)interfaceEClass.getEStructuralFeatures().get(1);
 	}
@@ -440,6 +463,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConsumerCoordinationDelegate() {
 		return consumerCoordinationDelegateEClass;
 	}
@@ -449,6 +473,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConsumerInterface() {
 		return consumerInterfaceEClass;
 	}
@@ -458,6 +483,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConsumerInterface_ServiceRequired() {
 		return (EReference)consumerInterfaceEClass.getEStructuralFeatures().get(0);
 	}
@@ -467,6 +493,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getProviderInterface() {
 		return providerInterfaceEClass;
 	}
@@ -476,6 +503,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getProviderInterface_ServiceProvided() {
 		return (EReference)providerInterfaceEClass.getEStructuralFeatures().get(0);
 	}
@@ -485,6 +513,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getClientAppComponent() {
 		return clientAppComponentEClass;
 	}
@@ -494,6 +523,7 @@ public class ChorarchPackageImpl extends EPackageImpl implements ChorarchPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChorarchFactory getChorarchFactory() {
 		return (ChorarchFactory)getEFactoryInstance();
 	}

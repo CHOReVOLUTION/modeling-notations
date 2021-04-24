@@ -1,4 +1,17 @@
 /**
+ * Copyright 2015 The CHOReVOLUTION project
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package eu.chorevolution.modelingnotations.servicething.impl;
 
@@ -41,6 +54,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implements ServiceThingModel {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.";
+
 	/**
 	 * The cached value of the '{@link #getInterfaceDescription() <em>Interface Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -195,6 +215,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceDescription getInterfaceDescription() {
 		return interfaceDescription;
 	}
@@ -219,6 +240,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInterfaceDescription(InterfaceDescription newInterfaceDescription) {
 		if (newInterfaceDescription != interfaceDescription) {
 			NotificationChain msgs = null;
@@ -238,6 +260,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionProtocolDescription getInteractionProtocolDescription() {
 		return interactionProtocolDescription;
 	}
@@ -262,6 +285,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInteractionProtocolDescription(InteractionProtocolDescription newInteractionProtocolDescription) {
 		if (newInteractionProtocolDescription != interactionProtocolDescription) {
 			NotificationChain msgs = null;
@@ -281,6 +305,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QoSDescription getQosDescription() {
 		return qosDescription;
 	}
@@ -305,6 +330,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQosDescription(QoSDescription newQosDescription) {
 		if (newQosDescription != qosDescription) {
 			NotificationChain msgs = null;
@@ -324,6 +350,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IdentityDescription getIdentityDescription() {
 		return identityDescription;
 	}
@@ -348,6 +375,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentityDescription(IdentityDescription newIdentityDescription) {
 		if (newIdentityDescription != identityDescription) {
 			NotificationChain msgs = null;
@@ -367,6 +395,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SecurityDescription getSecurityDescription() {
 		return securityDescription;
 	}
@@ -391,6 +420,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSecurityDescription(SecurityDescription newSecurityDescription) {
 		if (newSecurityDescription != securityDescription) {
 			NotificationChain msgs = null;
@@ -410,6 +440,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getID() {
 		return id;
 	}
@@ -419,6 +450,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setID(String newID) {
 		String oldID = id;
 		id = newID;
@@ -431,6 +463,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -440,6 +473,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -452,6 +486,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getEndpoint() {
 		return endpoint;
 	}
@@ -461,6 +496,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEndpoint(String newEndpoint) {
 		String oldEndpoint = endpoint;
 		endpoint = newEndpoint;
@@ -473,6 +509,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -482,6 +519,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -658,7 +696,7 @@ public class ServiceThingModelImpl extends MinimalEObjectImpl.Container implemen
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (ID: ");
 		result.append(id);
 		result.append(", name: ");

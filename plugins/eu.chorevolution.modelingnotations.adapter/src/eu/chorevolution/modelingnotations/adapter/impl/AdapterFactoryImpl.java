@@ -1,18 +1,17 @@
 /**
- * Copyright Text    
- *  Copyright 2015 The CHOReVOLUTION project
- *  
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *  
- * http://www.apache.org/licenses/LICENSE-2.0
- *  
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ * Copyright 2015 The CHOReVOLUTION project
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package eu.chorevolution.modelingnotations.adapter.impl;
 
@@ -34,6 +33,13 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * @generated
  */
 public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.";
+
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
@@ -144,6 +150,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdapterModel createAdapterModel() {
 		AdapterModelImpl adapterModel = new AdapterModelImpl();
 		return adapterModel;
@@ -154,6 +161,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageRelation createMessageRelation() {
 		MessageRelationImpl messageRelation = new MessageRelationImpl();
 		return messageRelation;
@@ -164,6 +172,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataItemRelation createDataItemRelation() {
 		DataItemRelationImpl dataItemRelation = new DataItemRelationImpl();
 		return dataItemRelation;
@@ -174,6 +183,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChoreographyMessage createChoreographyMessage() {
 		ChoreographyMessageImpl choreographyMessage = new ChoreographyMessageImpl();
 		return choreographyMessage;
@@ -184,6 +194,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message createMessage() {
 		MessageImpl message = new MessageImpl();
 		return message;
@@ -194,6 +205,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChoreographyComplexItem createChoreographyComplexItem() {
 		ChoreographyComplexItemImpl choreographyComplexItem = new ChoreographyComplexItemImpl();
 		return choreographyComplexItem;
@@ -204,6 +216,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChoreographySimpleItem createChoreographySimpleItem() {
 		ChoreographySimpleItemImpl choreographySimpleItem = new ChoreographySimpleItemImpl();
 		return choreographySimpleItem;
@@ -214,6 +227,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComplexItem createComplexItem() {
 		ComplexItemImpl complexItem = new ComplexItemImpl();
 		return complexItem;
@@ -224,6 +238,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SimpleItem createSimpleItem() {
 		SimpleItemImpl simpleItem = new SimpleItemImpl();
 		return simpleItem;
@@ -234,6 +249,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringEnumerationItem createStringEnumerationItem() {
 		StringEnumerationItemImpl stringEnumerationItem = new StringEnumerationItemImpl();
 		return stringEnumerationItem;
@@ -244,6 +260,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IntegerEnumerationItem createIntegerEnumerationItem() {
 		IntegerEnumerationItemImpl integerEnumerationItem = new IntegerEnumerationItemImpl();
 		return integerEnumerationItem;
@@ -254,6 +271,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnumerationItemRelation createEnumerationItemRelation() {
 		EnumerationItemRelationImpl enumerationItemRelation = new EnumerationItemRelationImpl();
 		return enumerationItemRelation;
@@ -264,6 +282,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChoreographyTask createChoreographyTask() {
 		ChoreographyTaskImpl choreographyTask = new ChoreographyTaskImpl();
 		return choreographyTask;
@@ -274,6 +293,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOperation() {
 		OperationImpl operation = new OperationImpl();
 		return operation;
@@ -284,6 +304,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationRelation createOperationRelation() {
 		OperationRelationImpl operationRelation = new OperationRelationImpl();
 		return operationRelation;
@@ -294,6 +315,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DoubleEnumerationItem createDoubleEnumerationItem() {
 		DoubleEnumerationItemImpl doubleEnumerationItem = new DoubleEnumerationItemImpl();
 		return doubleEnumerationItem;
@@ -304,6 +326,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateEnumerationItem createDateEnumerationItem() {
 		DateEnumerationItemImpl dateEnumerationItem = new DateEnumerationItemImpl();
 		return dateEnumerationItem;
@@ -414,6 +437,7 @@ public class AdapterFactoryImpl extends EFactoryImpl implements AdapterFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdapterPackage getAdapterPackage() {
 		return (AdapterPackage)getEPackage();
 	}

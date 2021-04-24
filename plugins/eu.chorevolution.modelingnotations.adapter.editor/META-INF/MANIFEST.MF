@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: eu.chorevolution.modelingnotations.adapter.editor;singleton:=true
+Automatic-Module-Name: eu.chorevolution.modelingnotations.adapter.editor
 Bundle-Version: 2.3.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: eu.chorevolution.modelingnotations.adapter.presentation.AdapterEditorPlugin$Implementation

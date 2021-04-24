@@ -1,4 +1,17 @@
 /**
+ * Copyright 2015 The CHOReVOLUTION project
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package eu.chorevolution.modelingnotations.security.impl;
 
@@ -29,6 +42,13 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
  * @generated
  */
 public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.";
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,7 +126,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link SecurityPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -120,7 +140,8 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		if (isInited) return (SecurityPackage)EPackage.Registry.INSTANCE.getEPackage(SecurityPackage.eNS_URI);
 
 		// Obtain or create and register package
-		SecurityPackageImpl theSecurityPackage = (SecurityPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SecurityPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SecurityPackageImpl());
+		Object registeredSecurityPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		SecurityPackageImpl theSecurityPackage = registeredSecurityPackage instanceof SecurityPackageImpl ? (SecurityPackageImpl)registeredSecurityPackage : new SecurityPackageImpl();
 
 		isInited = true;
 
@@ -136,7 +157,6 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		// Mark meta-data to indicate it can't be changed
 		theSecurityPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(SecurityPackage.eNS_URI, theSecurityPackage);
 		return theSecurityPackage;
@@ -147,6 +167,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSecurityPolicySet() {
 		return securityPolicySetEClass;
 	}
@@ -156,6 +177,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSecurityPolicySet_Authentication() {
 		return (EReference)securityPolicySetEClass.getEStructuralFeatures().get(0);
 	}
@@ -165,6 +187,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSecurityPolicySet_Communication() {
 		return (EReference)securityPolicySetEClass.getEStructuralFeatures().get(1);
 	}
@@ -174,6 +197,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSecurityPolicySet_Name() {
 		return (EAttribute)securityPolicySetEClass.getEStructuralFeatures().get(2);
 	}
@@ -183,6 +207,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSecurityPolicySet_RessourceURL() {
 		return (EAttribute)securityPolicySetEClass.getEStructuralFeatures().get(3);
 	}
@@ -192,6 +217,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSecurityPolicySet_ServiceName() {
 		return (EAttribute)securityPolicySetEClass.getEStructuralFeatures().get(4);
 	}
@@ -201,6 +227,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAuthentication() {
 		return authenticationEClass;
 	}
@@ -210,6 +237,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuthentication_Name() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(0);
 	}
@@ -219,6 +247,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuthentication_CredentialType() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(1);
 	}
@@ -228,6 +257,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuthentication_GenericAccount() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(2);
 	}
@@ -237,6 +267,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuthentication_GenericCredential() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(3);
 	}
@@ -246,6 +277,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuthentication_AuthNElement() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(4);
 	}
@@ -255,6 +287,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuthentication_AuthNTypeForwarded() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(5);
 	}
@@ -264,6 +297,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuthentication_CustomParametersNames() {
 		return (EAttribute)authenticationEClass.getEStructuralFeatures().get(6);
 	}
@@ -273,6 +307,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCommunication() {
 		return communicationEClass;
 	}
@@ -282,6 +317,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCommunication_Name() {
 		return (EAttribute)communicationEClass.getEStructuralFeatures().get(0);
 	}
@@ -291,6 +327,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCommunication_SecuredCommunication() {
 		return (EAttribute)communicationEClass.getEStructuralFeatures().get(1);
 	}
@@ -300,6 +337,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSecurityModel() {
 		return securityModelEClass;
 	}
@@ -309,6 +347,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSecurityModel_Securitypolicyset() {
 		return (EReference)securityModelEClass.getEStructuralFeatures().get(0);
 	}
@@ -318,6 +357,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSecurityModel_Name() {
 		return (EAttribute)securityModelEClass.getEStructuralFeatures().get(1);
 	}
@@ -327,6 +367,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getCredentialType() {
 		return credentialTypeEEnum;
 	}
@@ -336,6 +377,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getAuthenticationElement() {
 		return authenticationElementEEnum;
 	}
@@ -345,6 +387,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getAuthenticationTypeForwarded() {
 		return authenticationTypeForwardedEEnum;
 	}
@@ -354,6 +397,7 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SecurityFactory getSecurityFactory() {
 		return (SecurityFactory)getEFactoryInstance();
 	}

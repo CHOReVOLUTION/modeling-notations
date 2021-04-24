@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  * 
- *       http://www.apache.org/licenses/LICENSE-2.0
+ *       http://www.apache.org/licenses/LICENSE-2.0
  * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -37,7 +37,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\r\n\r\nLicensed under the Apache License, Version 2.0 (the \"License\");\r\nyou may not use this file except in compliance with the License.\r\nYou may obtain a copy of the License at\r\n\r\n      http://www.apache.org/licenses/LICENSE-2.0\r\n\r\nUnless required by applicable law or agreed to in writing, software\r\ndistributed under the License is distributed on an \"AS IS\" BASIS,\r\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\nSee the License for the specific language governing permissions and\r\nlimitations under the License.";
+	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.";
 
 	/**
 	 * Creates the default factory implementation.
@@ -98,6 +98,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChorArchModel createChorArchModel() {
 		ChorArchModelImpl chorArchModel = new ChorArchModelImpl();
 		return chorArchModel;
@@ -108,6 +109,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Adapter createAdapter() {
 		AdapterImpl adapter = new AdapterImpl();
 		return adapter;
@@ -118,6 +120,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SecurityFilter createSecurityFilter() {
 		SecurityFilterImpl securityFilter = new SecurityFilterImpl();
 		return securityFilter;
@@ -128,6 +131,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BindingComponent createBindingComponent() {
 		BindingComponentImpl bindingComponent = new BindingComponentImpl();
 		return bindingComponent;
@@ -138,6 +142,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProsumerCoordinationDelegate createProsumerCoordinationDelegate() {
 		ProsumerCoordinationDelegateImpl prosumerCoordinationDelegate = new ProsumerCoordinationDelegateImpl();
 		return prosumerCoordinationDelegate;
@@ -148,6 +153,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WebServiceComponent createWebServiceComponent() {
 		WebServiceComponentImpl webServiceComponent = new WebServiceComponentImpl();
 		return webServiceComponent;
@@ -158,6 +164,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RestServiceComponent createRestServiceComponent() {
 		RestServiceComponentImpl restServiceComponent = new RestServiceComponentImpl();
 		return restServiceComponent;
@@ -168,6 +175,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ThingComponent createThingComponent() {
 		ThingComponentImpl thingComponent = new ThingComponentImpl();
 		return thingComponent;
@@ -178,6 +186,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsumerCoordinationDelegate createConsumerCoordinationDelegate() {
 		ConsumerCoordinationDelegateImpl consumerCoordinationDelegate = new ConsumerCoordinationDelegateImpl();
 		return consumerCoordinationDelegate;
@@ -188,6 +197,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsumerInterface createConsumerInterface() {
 		ConsumerInterfaceImpl consumerInterface = new ConsumerInterfaceImpl();
 		return consumerInterface;
@@ -198,6 +208,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProviderInterface createProviderInterface() {
 		ProviderInterfaceImpl providerInterface = new ProviderInterfaceImpl();
 		return providerInterface;
@@ -208,6 +219,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClientAppComponent createClientAppComponent() {
 		ClientAppComponentImpl clientAppComponent = new ClientAppComponentImpl();
 		return clientAppComponent;
@@ -218,6 +230,7 @@ public class ChorarchFactoryImpl extends EFactoryImpl implements ChorarchFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChorarchPackage getChorarchPackage() {
 		return (ChorarchPackage)getEPackage();
 	}

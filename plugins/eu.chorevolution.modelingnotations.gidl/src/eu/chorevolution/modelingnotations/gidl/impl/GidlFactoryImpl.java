@@ -1,18 +1,17 @@
 /**
- * Copyright Text    
- *  Copyright 2015 The CHOReVOLUTION project
- *  
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *  
- * http://www.apache.org/licenses/LICENSE-2.0
- *  
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ * Copyright 2015 The CHOReVOLUTION project
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package eu.chorevolution.modelingnotations.gidl.impl;
 
@@ -34,6 +33,13 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * @generated
  */
 public class GidlFactoryImpl extends EFactoryImpl implements GidlFactory {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final String copyright = "Copyright 2015 The CHOReVOLUTION project\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.";
+
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
@@ -178,6 +184,7 @@ public class GidlFactoryImpl extends EFactoryImpl implements GidlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GIDLModel createGIDLModel() {
 		GIDLModelImpl gidlModel = new GIDLModelImpl();
 		return gidlModel;
@@ -188,6 +195,7 @@ public class GidlFactoryImpl extends EFactoryImpl implements GidlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceDescription createInterfaceDescription() {
 		InterfaceDescriptionImpl interfaceDescription = new InterfaceDescriptionImpl();
 		return interfaceDescription;
@@ -198,6 +206,7 @@ public class GidlFactoryImpl extends EFactoryImpl implements GidlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOperation() {
 		OperationImpl operation = new OperationImpl();
 		return operation;
@@ -208,6 +217,7 @@ public class GidlFactoryImpl extends EFactoryImpl implements GidlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Scope createScope() {
 		ScopeImpl scope = new ScopeImpl();
 		return scope;
@@ -218,6 +228,7 @@ public class GidlFactoryImpl extends EFactoryImpl implements GidlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Data createData() {
 		DataImpl data = new DataImpl();
 		return data;
@@ -228,6 +239,7 @@ public class GidlFactoryImpl extends EFactoryImpl implements GidlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SimpleType createSimpleType() {
 		SimpleTypeImpl simpleType = new SimpleTypeImpl();
 		return simpleType;
@@ -238,6 +250,7 @@ public class GidlFactoryImpl extends EFactoryImpl implements GidlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComplexType createComplexType() {
 		ComplexTypeImpl complexType = new ComplexTypeImpl();
 		return complexType;
@@ -552,6 +565,7 @@ public class GidlFactoryImpl extends EFactoryImpl implements GidlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GidlPackage getGidlPackage() {
 		return (GidlPackage)getEPackage();
 	}
